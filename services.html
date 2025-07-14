@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUR Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 9999;
+    }
+
+    .navbar-brand {
+      color: #00bfff;
+      font-weight: bold;
+    }
+
+    .nav-link {
+      color: #00bfff;
+      margin-left: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+      background-color: #e0f7ff;
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+/* Carousel container */
+    .carousel-item {
+      height: 40vh;
+      background: no-repeat center center scroll;
+      background-size: cover;
+      position: relative;
+    }
+
+    .carousel-caption {
+      bottom: 0%;
+    }
+
+    .carousel-caption h1 {
+      font-size: 3rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+    }
+
+    .breadcrumb {
+      background-color: transparent;
+      justify-content: center;
+    }
+
+    .carousel-overlay {
+      background: rgba(0, 0, 0, 0.3);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      backdrop-filter: blur(6px);
+    }
+    .features-section {
+      padding: 60px 0;
+    }
+
+    .features-section h2 {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .features-section p.subtitle {
+      color: #444;
+      margin-bottom: 40px;
+    }
+
+    .features-section ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .features-section ul li {
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    .features-section ul li i {
+      color: #00bfff;
+      margin-right: 8px;
+    }
+
+    .btn-purchase {
+      background-color: #56c0e0;
+      color: #fff;
+      font-weight: bold;
+      padding: 10px 25px;
+      border: none;
+    }
+
+    .features-images img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .features-images .second-img {
+      margin-top: -60px;
+      margin-left: 20px;
+    }
+    .services {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .services h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    
+    .services p {
+      color: #5a3d5c;
+      font-size: 16px;
+    }
+    
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    
+    .service-card {
+      display: flex;
+      background-color: #f9f9f9;
+      padding: 15px;
+      gap: 20px;
+      align-items: flex-start;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .service-card img {
+      width: 120px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    
+    .service-content {
+      text-align: left;
+    }
+    
+    .service-content h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #333;
+    }
+    
+    .service-content p {
+      margin: 0;
+      color: #666;
+      font-size: 14px;
+    }
+    .carousel-item {
+      height: 40vh;
+      background: no-repeat center center scroll;
+      background-size: cover;
+      position: relative;
+    }
+
+    .carousel-caption {
+      bottom: 0%;
+    }
+
+    .carousel-caption h1 {
+      font-size: 3rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+    }
+
+    .breadcrumb {
+      background-color: transparent;
+      justify-content: center;
+    }
+
+    .carousel-overlay {
+      background: rgba(0, 0, 0, 0.3);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      backdrop-filter: blur(6px);
+    }
+
+    .highlight-box {
+      background-color: rgba(135, 206, 250, 0.3);
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: 5px;
+    }
+    .card img {
+      height: 180px;
+      object-fit: cover;
+    }
+    .progress {
+      height: 8px;
+      background-color: #eee;
+    }
+    .progress-bar {
+      background-color: #56c0e0;
+    }
+
+    .carousel-wrapper {
+      overflow: hidden;
+      background-color: #f9f9f9;
+      padding: 40px 0;
+    }
+
+    .badges-track {
+      display: flex;
+      animation: scrollBadges 25s linear infinite;
+      justify-content: center;
+    }
+
+    .badges-track img {
+      height: 80px;
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+    }
+
+    .badges-track img:hover {
+      opacity: 1;
+    }
+
+
+  footer {
+  text-align: center;
+  background-color: #fff;
+  padding: 40px 20px 0;
+  position: relative;
+}
+
+.footer-logo h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.footer-logo .highlight {
+  color: #5bc0de;
+}
+
+.subscribe-form {
+  margin: 20px auto;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #5bc0de;
+}
+
+.subscribe-form input {
+  padding: 10px;
+  width: 70%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.subscribe-form button {
+  background-color: #5bc0de;
+  border: none;
+  color: white;
+  padding: 10px 39px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #5bc0de;
+  font-size: 20px;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  background-color: #5bc0de;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+</style>
+<body>
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">✈ Euro Travel</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="./About.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active " href="./services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- carousel-caption -->
+<div id="storyCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner" >
+    <div class="carousel-item active" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRelt3QaCp9D8GJ6mFpSnepze3dlInNuOSptA&s');" >
+      <div class="carousel-overlay"></div>
+      <div class="carousel-caption text-white">
+        <h1>OUR SERVICES</h1>
+        <nav aria-label="breadcrumb">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./index.html" class="text-white text-decoration-none">Home  </a></li>
+            <li class="breadcrumb-item active text-white" aria-current="page">SERVICES</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>    
+
+
+
+<!-- Feature selection -->
+<section class="features-section text-center">
+  <div class="container">
+    <h2>Features</h2>
+    <p class="subtitle">Lorem Ipsum is simply dummy text of the industry.</p>
+
+    <div class="row align-items-center mt-5">
+      <div class="col-md-6 text-md-start">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante ex, fermentum vel libero eget interdum semper libero. Curabitur egestas, arcu id tempor convallis.</p>
+        <ul class="mt-4">
+          <li><i class="bi bi-star-fill"></i> Vestibulum pulvinar commodo malesuada.</li>
+          <li><i class="bi bi-star-fill"></i> Pellentesque id massa et ligula convallis porta.</li>
+          <li><i class="bi bi-star-fill"></i> Vivamus sed nunc sed ligula rhoncus sit amet eu elit.</li>
+          <li><i class="bi bi-star-fill"></i> Curabitur in ipsum vel ipsum vehicula congue.</li>
+        </ul>
+        <button class="btn btn-purchase mt-4">PURCHASE</button>
+      </div>
+
+      <div class="col-md-6 features-images text-center mt-4 mt-md-0">
+        <img src="https://themewagon.github.io/Euro-Travels/assets/images/features-bg.png" alt="Beach Van">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Services -->
+    <div class="services">
+    <h2>Additional services</h2>
+    <p>Lorem Ipsum is simply dummy text of the industry.</p>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="https://themewagon.github.io/Euro-Travels/assets/images/add-srvc-1.png" alt="Photography">
+        <div class="service-content">
+          <h3>Photography</h3>
+          <p>Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://themewagon.github.io/Euro-Travels/assets/images/add-srvc-2.png" alt="Cycling">
+        <div class="service-content">
+          <h3>Cycling</h3>
+          <p>Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://themewagon.github.io/Euro-Travels/assets/images/add-srvc-3.png" alt="Walking">
+        <div class="service-content">
+          <h3>Walking</h3>
+          <p>Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://themewagon.github.io/Euro-Travels/assets/images/add-srvc-4.png" alt="Skiing">
+        <div class="service-content">
+          <h3>Skiing</h3>
+          <p>Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://themewagon.github.io/Euro-Travels/assets/images/add-srvc-5.png" alt="Sea beach">
+        <div class="service-content">
+          <h3>Sea beach</h3>
+          <p>Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <img src="https://themewagon.github.io/Euro-Travels/assets/images/add-srvc-6.png" alt="Hill tracking">
+        <div class="service-content">
+          <h3>Hill tracking</h3>
+          <p>Etiam pharetra ut ante eget ehy efficitur. Nullam quis felis at nunc vehicula sollicitudin euliquam quis felis atblan dit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Badges  -->
+<div class="carousel-wrapper">
+    <div class="badges-track">
+      <div class="badges-inner">
+        <img src="https://themewagon.github.io/Euro-Travels/assets/images/sp-1.png" alt="Badge 1">
+        <img src="https://themewagon.github.io/Euro-Travels/assets/images/sp-2.png" alt="Badge 2">
+        <img src="https://themewagon.github.io/Euro-Travels/assets/images/sp-3.png" alt="Badge 3">
+        <img src="https://themewagon.github.io/Euro-Travels/assets/images/sp-4.png" alt="Badge 4">
+        <img src="https://themewagon.github.io/Euro-Travels/assets/images/sp-5.png" alt="Badge 5">
+        <img src="https://themewagon.github.io/Euro-Travels/assets/images/sp-6.png" alt="Badge 6">
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- Footer -->
+ <footer>
+<footer>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <h1> <span class="highlight">✈ Euro </span> Travel</h1>
+      <p>Subscribe to our Newsletter</p>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Email address" required>
+        <button type="submit">DONE</button>
+      </form>
+      <div class="social-icons">
+        <a href="./index.html"><i class="bi bi-twitter"></i></a>
+        <a href="./index.html"><i class="bi bi-facebook"></i></a>
+        <a href="./index.html"><i class="bi bi-linkedin"></i></a>
+        <a href="./services.html"><i class="bi bi-google"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© Copyright Euro Travels</p>
+    <p>Theme by <strong>THEMEWAGON</strong></p>
+  </div>
+</footer>
+
+
+
+
+
+
+<!-- Bootstrap JS (required for toggle) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

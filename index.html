@@ -44,16 +44,16 @@
       padding: 5px 10px;
     }
     .carousel-container {
-      /*background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUTkrl4AHStMmCmqKE7i9LqPcmsCi1aEpTLg&s');*/
-      background-color:lightblue;
-      background-size: cover;
+      /*background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRelt3QaCp9D8GJ6mFpSnepze3dlInNuOSptA&s');*/
+      background-color: lightblue;
       opacity: 1;
-      height: 800px;
-      padding: 30px 0;
+      background-size: cover;
+      height: 50vh;
+      padding: 2em 0;
     }
 
     .carousel-item {
-      height: 500px;
+      height: 30vh;
       background-size: auto;
       background-repeat: no-repeat;
     }
@@ -78,8 +78,8 @@
 
     .carousel-caption .btn {
       border: 1px solid #fff;
-      padding: 10px 25px;
-      border-radius: 30px;
+      padding: 0.7em 2em;
+      border-radius: 2em;
       background: transparent;
       color: white;
       transition: 0.3s;
@@ -93,7 +93,7 @@
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
       background-color: rgba(0,0,0,0.4);
-      padding: 20px;
+      padding: 1.5em;
       border-radius: 50%;
     }
 
@@ -293,7 +293,6 @@
   font-size: 16px;
 }
 
-/* Grid container for cards */
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -302,7 +301,6 @@
   margin: auto;
 }
 
-/* Individual service card */
 .service-card {
   display: flex;
   background-color: #f9f9f9;
@@ -318,7 +316,6 @@
   transform: translateY(-5px);
 }
 
-/* Image styling */
 .service-card img {
   width: 120px;
   height: auto;
@@ -326,7 +323,6 @@
   border-radius: 4px;
 }
 
-/* Text content */
 .service-content {
   text-align: left;
 }
@@ -403,7 +399,7 @@
   background-color: #5bc0de;
   border: none;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 39px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -419,7 +415,6 @@
   text-decoration: none;
 }
 
-/* Footer bottom */
 .footer-bottom {
   background-color: #5bc0de;
   color: #fff;
@@ -430,7 +425,6 @@
   flex-wrap: wrap;
 }
 
-/* Back to top button */
 .back-to-top {
   position: absolute;
   bottom: 0px;
@@ -445,30 +439,29 @@
 
 
 
-    @media (max-width: 768px) {
-      .carousel-caption h1 {
-        font-size: 1.4rem;
-      }
+@media (max-width: 768px) {
+  .carousel-caption h1 {
+    font-size: 1.4rem;
+  }
 
-      .carousel-item {
-        height: 500px;
-      }
-      .tour-form {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .tour-form select,
-      .tour-form input,
-      .tour-form button {
-        width: 90%;
-      }
-      .carousel-item img {
-        height: 250px;
-      }      
+  .carousel-item {
+    height: 500px;
+  }
+  .tour-form {
+      flex-direction: column;
+      align-items: center;
     }
+  .tour-form select,
+  .tour-form input,
+  .tour-form button {
+    width: 90%;
+  }
+  .carousel-item img {
+    height: 250px;
+  }      
+  }
 
-    .banner {
+  .banner {
     flex-direction: row;
     align-items: center;
     text-align: center;
@@ -505,11 +498,11 @@
     font-size: 13px;
   }
   .badges-track {
-        animation-duration: 40s;
-      }
+    animation-duration: 40s;
+  }
 
-      .badges-track img {
-        height: 60px;
+  .badges-track img {
+    height: 60px;
       }
   </style>
 </head>
@@ -518,53 +511,72 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#">✈ Euro Travel</a>
+    <a class="navbar-brand" href="./index.html">✈ Euro Travel</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="./About.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Carousel Section with Blue Background -->
-<div class="carousel-container">
-  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-
-      <!-- Slide 1 -->
-      <div class="carousel-item active" style="background-image: url('https://themewagon.github.io/Euro-Travels/assets/images/item-1.png');background-position: left center;">
-        <div class="carousel-caption text-center text-white">
-          <h1><span>TRAVELING</span> ALWAYS "GOOD IDEA"</h1>
-          <p>It leaves you speechless, then turns your into a storyteller.</p>
-          <a class="btn">BOOK NOW</a>
+<!-- Carousel Section -->
+<div id="mainCarousel" class="carousel slide carousel-container" data-bs-ride="carousel" style="height: 800px; background-size: cover;">
+  <div class="carousel-inner h-100">
+    <!-- Slide 1 -->
+    <div class="carousel-item active h-100">
+      <div class="container h-100">
+        <div class="row align-items-center h-100">
+          <!-- Image on the left -->
+          <div class="col-md-4 d-flex justify-content-start">
+            <img src="https://themewagon.github.io/Euro-Travels/assets/images/item-1.png" class="img-fluid" alt="Traveling Always Good Idea" style="max-height: 350px; object-fit: contain; opacity: 1;">
+          </div>
+          <!-- Text in the middle -->
+          <div class="col-md-6 offset-md-1 d-flex flex-column justify-content-center">
+            <div class="carousel-caption text-start text-white" style="position: static;">
+              <h1><span>TRAVELING</span> ALWAYS "GOOD IDEA"</h1>
+              <p>It leaves you speechless, then turns you into a storyteller.</p>
+              <a class="btn">BOOK NOW</a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Slide 2 -->
-       <div class="carousel-item" style="background-image: url('https://themewagon.github.io/Euro-Travels/assets/images/item-2.png'); background-position: bottom left;">
-        <div class="carousel-caption text-center text-white">
-          <h1>TO <span>TRAVEL</span> IS TO <span>LIVE</span></h1>
-          <p>It leaves you speechless, then turns your into a storyteller.</p>
-          <a class="btn">BOOK NOW</a>
-        </div>
-      </div>
-
     </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </button>
+
+
+
+
+<!-- Slide 2 -->
+    <div class="carousel-item h-100">
+      <div class="container h-100">
+        <div class="row align-items-center h-100">
+          <div class="col-md-4 d-flex justify-content-start">
+            <img src="https://themewagon.github.io/Euro-Travels/assets/images/item-2.png" class="img-fluid" alt="To Travel Is To Live" style="max-height: 350px; object-fit: contain; opacity: 1;">
+          </div>
+          <div class="col-md-6 offset-md-1 d-flex flex-column justify-content-center">
+            <div class="carousel-caption text-start text-white" style="position: static;">
+              <h1>TO <span>TRAVEL</span> IS TO <span>LIVE</span></h1>
+              <p>It leaves you speechless, then turns you into a storyteller.</p>
+              <a class="btn">BOOK NOW</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev" style="background: none; border: none;">
+    <span class="carousel-control-prev-icon" style="background-color: transparent;"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next" style="background: none; border: none;">
+    <span class="carousel-control-next-icon" style="background-color: transparent;"></span>
+  </button>
 </div>
 
 <!-- find a tour -->
@@ -704,7 +716,7 @@
     </div>
   </div>
 
-
+<!-- Services -->
     <div class="services">
     <h2>Additional services</h2>
     <p>Lorem Ipsum is simply dummy text of the industry.</p>
@@ -783,7 +795,7 @@
 <footer>
   <div class="footer-content">
     <div class="footer-logo">
-      <h1><span class="icon">✈</span> <span class="highlight">Euro</span> Travel</h1>
+      <h1><span class="highlight"> ✈Euro</span> Travel</h1>
       <p>Subscribe to our Newsletter</p>
       <form class="subscribe-form">
         <input type="email" placeholder="Email address" required>
