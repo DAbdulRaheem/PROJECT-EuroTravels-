@@ -341,29 +341,36 @@
 
 
 .carousel-wrapper {
-      overflow: hidden;
-      background-color: #f9f9f9;
-      padding: 40px 0;
-    }
+  overflow: hidden;
+  background-color: #f9f9f9;
+  padding: 40px 0;
+}
+.badges-track {
+  display: flex;
+  animation: scrollBadges 25s linear infinite;
+  justify-content: center;
+}
+.badges-inner {
+  display: flex;
+  gap: 24px;
+  padding: 10px 40px;
+}
+.badges-inner img {
+  height: 80px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.badges-inner img:hover {
+  opacity: 1;
+}
+@keyframes scrollBadges {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
-    .badges-track {
-      display: flex;
-      animation: scrollBadges 25s linear infinite;
-      justify-content: center;
-    }
-
-    .badges-track img {
-      height: 80px;
-      opacity: 0.5;
-      transition: opacity 0.3s ease;
-    }
-
-    .badges-track img:hover {
-      opacity: 1;
-    }
 
 
-    footer {
+footer {
   text-align: center;
   background-color: #fff;
   padding: 40px 20px 0;
@@ -497,13 +504,13 @@
   .service-content p {
     font-size: 13px;
   }
-  .badges-track {
-    animation-duration: 40s;
+  .badges-inner {
+    gap: 16px;
+    padding: 10px 20px;
   }
-
-  .badges-track img {
+  .badges-inner img {
     height: 60px;
-      }
+  }
   </style>
 </head>
 <body>

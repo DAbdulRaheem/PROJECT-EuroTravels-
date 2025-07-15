@@ -38,7 +38,7 @@
       border-radius: 5px;
       padding: 5px 10px;
     }
-/* Carousel container */
+    /* Carousel container */
     .carousel-item {
       height: 40vh;
       background: no-repeat center center scroll;
@@ -122,17 +122,17 @@
       text-align: center;
       margin-bottom: 40px;
     }
-    
+
     .services h2 {
       font-size: 36px;
       margin-bottom: 10px;
     }
-    
+
     .services p {
       color: #5a3d5c;
       font-size: 16px;
     }
-    
+
     .service-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -140,7 +140,7 @@
       max-width: 1200px;
       margin: auto;
     }
-    
+
     .service-card {
       display: flex;
       background-color: #f9f9f9;
@@ -151,28 +151,28 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
       transition: transform 0.3s ease;
     }
-    
+
     .service-card:hover {
       transform: translateY(-5px);
     }
-    
+
     .service-card img {
       width: 120px;
       height: auto;
       object-fit: cover;
       border-radius: 4px;
     }
-    
+
     .service-content {
       text-align: left;
     }
-    
+
     .service-content h3 {
       margin: 0 0 10px;
       font-size: 20px;
       color: #333;
     }
-    
+
     .service-content p {
       margin: 0;
       color: #666;
@@ -251,67 +251,109 @@
     }
 
 
-  footer {
-  text-align: center;
-  background-color: #fff;
-  padding: 40px 20px 0;
-  position: relative;
-}
+    footer {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px 20px 0;
+    position: relative;
+    }
 
-.footer-logo h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
+    .footer-logo h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    }
 
-.footer-logo .highlight {
-  color: #5bc0de;
-}
+    .footer-logo .highlight {
+    color: #5bc0de;
+    }
 
-.subscribe-form {
-  margin: 20px auto;
-  max-width: 400px;
-  display: flex;
-  justify-content: center;
-  border: 1px solid #5bc0de;
-}
+    .subscribe-form {
+    margin: 20px auto;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #5bc0de;
+    }
 
-.subscribe-form input {
-  padding: 10px;
-  width: 70%;
-  border: none;
-  outline: none;
-  font-size: 16px;
-}
+    .subscribe-form input {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    }
 
-.subscribe-form button {
-  background-color: #5bc0de;
-  border: none;
-  color: white;
-  padding: 10px 39px;
-  font-weight: bold;
-  cursor: pointer;
-}
+    .subscribe-form button {
+    background-color: #5bc0de;
+    border: none;
+    color: white;
+    padding: 10px 39px;
+    font-weight: bold;
+    cursor: pointer;
+    }
 
-.social-icons {
-  margin-top: 20px;
-}
+    .social-icons {
+    margin-top: 20px;
+    }
 
-.social-icons a {
-  color: #5bc0de;
-  font-size: 20px;
-  margin: 0 8px;
-  text-decoration: none;
-}
+    .social-icons a {
+    color: #5bc0de;
+    font-size: 20px;
+    margin: 0 8px;
+    text-decoration: none;
+    }
 
-.footer-bottom {
-  background-color: #5bc0de;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 40px;
-  font-size: 14px;
-  flex-wrap: wrap;
-}
+    .footer-bottom {
+    background-color: #5bc0de;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    font-size: 14px;
+    flex-wrap: wrap;
+    }
+
+    /* --- MEDIA QUERIES --- */
+    @media (max-width: 768px) {
+      .carousel-item {
+        height: 28vh;
+      }
+      .features-section {
+        padding: 30px 0;
+      }
+      .features-images img {
+        margin-top: 20px;
+      }
+      .service-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .service-card img {
+        width: 90px;
+        margin-bottom: 10px;
+      }
+      .service-content {
+        text-align: center;
+      }
+      .footer-logo h1 {
+        font-size: 26px;
+      }
+      .subscribe-form {
+        flex-direction: column;
+        border: none;
+      }
+      .subscribe-form input,
+      .subscribe-form button {
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+      }
+      .subscribe-form button {
+        margin-top: 8px;
+        padding: 10px 0;
+      }
+    }
 </style>
 <body>
 <nav class="navbar navbar-expand-lg">
