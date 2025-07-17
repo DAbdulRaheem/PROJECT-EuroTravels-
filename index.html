@@ -352,7 +352,7 @@
 }
 .badges-inner {
   display: flex;
-  gap: 24px;
+  gap: 10px;
   padding: 10px 40px;
 }
 .badges-inner img {
@@ -458,7 +458,7 @@ footer {
   .tour-form {
       flex-direction: column;
       align-items: center;
-    }
+  }
   .tour-form select,
   .tour-form input,
   .tour-form button {
@@ -467,7 +467,6 @@ footer {
   .carousel-item img {
     height: 250px;
   }      
-  }
 
   .banner {
     flex-direction: row;
@@ -505,13 +504,79 @@ footer {
   .service-content p {
     font-size: 13px;
   }
-  .badges-inner {
-    gap: 16px;
-    padding: 10px 20px;
+  .badges-track img {
+      height: 60px;
   }
-  .badges-inner img {
-    height: 60px;
+}
+@media (max-width: 576px) {
+
+  .carousel-caption,
+  .carousel-caption > .btn {
+    display: none;
   }
+
+  .carousel-item {
+    height: 400px;
+  }
+
+  .carousel-item img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .tour-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tour-form select,
+  .tour-form input,
+  .tour-form button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .banner {
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .banner-image img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .banner-content {
+    width: 100%;
+  }
+
+  .services h2 {
+    font-size: 24px;
+  }
+
+  .services p {
+    font-size: 13px;
+  }
+
+  .service-card {
+    padding: 8px;
+  }
+
+  .service-content h3 {
+    font-size: 16px;
+  }
+
+  .service-content p {
+    font-size: 12px;
+  }
+
+  .badges-track img {
+    height: 32px;
+  }
+}
+
   </style>
 </head>
 <body>
